@@ -1,0 +1,2 @@
+home:
+  banner_descuento: "div.column_banhome a[href*='kolbi_pers_telef_descuentos']"

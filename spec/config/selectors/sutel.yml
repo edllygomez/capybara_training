@@ -1,0 +1,4 @@
+sutel:
+  imei: "imei"
+  verificar_btn: "execute"
+  query_msg: "td.queryresult"
