@@ -13,7 +13,7 @@ feature "As a kolbi user, I'm able ", :js => true do
     Capybara.use_default_driver
   end
 
-  scenario "to see the errors in the registration process" do
+  scenario "to search on the app" do
     home_page = PageObjects::HomePage.new(user_bot)
     home_page.open
     busqueda_page = home_page.buscar(criteria)
