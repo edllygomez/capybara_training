@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature "As a kolbi user, I'm able", :js => true do
+feature "As a kolbi user, I'm able ", :js => true do
 
   given(:user_bot) { Bot::User.new }
   given(:imei) { '354445065269333'}
