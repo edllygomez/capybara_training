@@ -1,0 +1,3 @@
+busqueda:
+  resultados: "table.wpsTable tbody tr.wpsTableNrmRow"
+  texto: "ibm_portal_search_widgets_ResultsFetcher_0"

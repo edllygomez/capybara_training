@@ -16,9 +16,23 @@ module PageObjects
       DescuentosPage.new(bot)
     end
 
+    def buscar(text)
+      fill_in_search(text)
+      search
+      ResultadosPage.new(bot)
+    end
+
     private
-      def router
-        @router ||= Auto::Router.new(bot)
-      end
+    def router
+      @router ||= Auto::Router.new(bot)
+    end
+
+    def fill_in_search(text)
+      bot.sent_text_by(:id, Selector.home_buscar_input, text)
+    end
+
+    def search
+      bot.click_by_css(Selector.home_buscar_btn)
+    end
   end
 end

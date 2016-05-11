@@ -1,2 +1,4 @@
 home:
   banner_descuento: "div.column_banhome a[href*='kolbi_pers_telef_descuentos']"
+  buscar_input: "ibm_portal_search_widgets_ScopeSearchWidget_0_textBox"
+  buscar_btn: "input.searchIcon"
