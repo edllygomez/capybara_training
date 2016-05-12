@@ -8,7 +8,7 @@ module PageObjects
     end
 
     def consult_imei(imei)
-      fill_in_imei
+      fill_in_imei(imei)
       verify
     end
 
@@ -18,7 +18,7 @@ module PageObjects
 
     private
 
-    def fill_in_imei
+    def fill_in_imei(imei)
       bot.sent_text_by(:id, Selector.sutel_imei, imei)
     end
 
