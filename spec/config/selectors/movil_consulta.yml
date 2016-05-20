@@ -1,0 +1,11 @@
+movil:
+  pospago: "a[href='servicios?idSegmento=5001']"
+  plan_pospago_chk: "input[value='5004']"
+  consultar_btn: "input[name='verificar']"
+  nombre_cliente: "nombreCliente"
+  telefono_cliente: "telefono"
+  email_cliente: "correo"
+  pais_cliente: "pais"
+  provincia_cliente: "provincia"
+  enviar_btn: "input[type='submit']"
+  error_descripcion: "label[class='error'][for='descripcion']"
