@@ -21,7 +21,7 @@ end
 Capybara.default_driver = :selenium
 Capybara.javascript_driver = :selenium
 Capybara.run_server = false
-Capybara.app_host = 'http://www.kolbi.cr/'
+Capybara.app_host = 'https://sutel.go.cr/'
 Capybara.default_max_wait_time = 60
 
 

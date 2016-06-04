@@ -1,5 +1,4 @@
 home:
-  banner_descuento: "div.column_banhome a[href*='kolbi_pers_telef_descuentos']"
-  buscar_input: "ibm_portal_search_widgets_ScopeSearchWidget_0_textBox"
-  buscar_btn: "input.searchIcon"
-  contactanos: "div#menuh ul li a[href*='kAsistencia_soporte_Contactenos']"
+  a_su_servicio: "ul.tb-megamenu-nav li:nth-child(3) a.dropdown-toggle"
+  reclamos_tile: "div.sutel_shortcut_container a[href*='/sutel/reclamos/formulario']"
+  aresep_lnk: "a[href='http://www.aresep.go.cr']"

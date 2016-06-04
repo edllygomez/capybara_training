@@ -31,8 +31,8 @@ module Bot
       web_element.click
     end
 
-    def find_all(locator)
-      all(locator)
+    def find_all(locator, by=:css)
+      all(by, locator, visible: true)
     end
 
     def find_all_within(web_element, locator)
@@ -67,8 +67,8 @@ module Bot
       page.document.synchronize { find_all(locator) }
     end
 
-    def select_from(option, locator)
-      page.select(option, from: locator)
+    def select_from(option, locator, match)
+      page.select(option, from: locator, match: match)
     end
 
     def open_window(window_title)
