@@ -12,35 +12,32 @@ module PageObjects
       router.open('/')
     end
 
-    def list_descuentos
-      bot.click_by_css(Selector.home_banner_descuento)
-      DescuentosPage.new(bot)
+    def list_a_su_servicio
+      menu = bot.find_by(:css, Selector.home_a_su_servicio)
+      action_bot.move_to(menu)
+      sleep(1)
     end
 
-    def buscar(text)
-      fill_in_search(text)
-      search
-      ResultadosPage.new(bot)
+    def list_verificar_imei
+      action_bot.move_by(0, 160)
+      action_bot.move_by_click(-400, 0)
+      ImeiPage.new(bot)
     end
 
-    def escribir_consulta
-      contactanos = bot.find_by(:css, Selector.home_contactanos)
-      action_bot.move_to(contactanos)
-      action_bot.move_by_click(0, 100)
-      TemaConsultaPage.new(bot)
+    def list_reclamos
+      bot.click_by_css(Selector.home_reclamos_tile)
+      ComplainsPage.new(bot)
+    end
+
+    def visit_aresep
+      bot.click_by_css(Selector.home_aresep_lnk)
+      bot.open_window("Inicio - ARESEP")
     end
 
     private
+
     def router
       @router ||= Auto::Router.new(bot)
-    end
-
-    def fill_in_search(text)
-      bot.sent_text_by(:id, Selector.home_buscar_input, text)
-    end
-
-    def search
-      bot.click_by_css(Selector.home_buscar_btn)
     end
   end
 end
