@@ -5,7 +5,6 @@ module PageObjects
 
     def initialize(bot)
       @bot = bot
-      #@action_bot = Bot::Action.new
     end
 
     def verificar_imei(imei)

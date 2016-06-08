@@ -10,5 +10,9 @@ module Auto
     def open(url)
       bot.open(url)
     end
+
+    def open_link(link_text)
+      bot.click_lnk(link_text)
+    end
   end
 end
