@@ -31,6 +31,10 @@ module Bot
       web_element.click
     end
 
+    def click_lnk(link_name)
+      click_link(link_name)
+    end
+
     def find_all(locator, by=:css)
       all(by, locator, visible: true)
     end
@@ -73,6 +77,11 @@ module Bot
 
     def open_window(window_title)
       switch_to_window { title == window_title }
+    end
+
+    def open_last_window
+      window = page.driver.browser.window_handles.last
+      page.driver.browser.switch_to.window(window)
     end
 
     private

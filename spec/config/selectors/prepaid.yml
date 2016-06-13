@@ -1,0 +1,10 @@
+prepaid:
+  register_number_btn: "botonAceptar"
+  continue_btn: "botonContinuar"
+  accept_terms_btn: "botonAceptar"
+  costarricense_rdo: "idRadioCosta"
+  prepaid_num: "idNumeroPrepagoCosta"
+  email: "idCorreoCosta"
+  id_owner: "idNumCeldaTitularCosta"
+  code: "idCodigoImpresoCosta"
+  submit_btn: "enviarCosta"

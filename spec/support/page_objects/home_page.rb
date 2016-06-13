@@ -29,9 +29,15 @@ module PageObjects
       ComplainsPage.new(bot)
     end
 
+    def search(text)
+      bot.sent_text_by(:id, Selector.home_search_txt, text)
+      bot.click_by_id(Selector.home_search_btn)
+      SearchPage.new(bot)
+    end
+
     def visit_aresep
       bot.click_by_css(Selector.home_aresep_lnk)
-      bot.open_window("Inicio - ARESEP")
+      bot.open_window('Inicio - ARESEP')
     end
 
     private
