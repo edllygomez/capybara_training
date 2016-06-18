@@ -24,6 +24,11 @@ module PageObjects
       ImeiPage.new(bot)
     end
 
+    def list_tarifas_vigentes
+      action_bot.move_by_click(0, 45)
+      TarifasPage.new(bot)
+    end
+
     def list_reclamos
       bot.click_by_css(Selector.home_reclamos_tile)
       ComplainsPage.new(bot)
@@ -38,6 +43,18 @@ module PageObjects
     def visit_aresep
       bot.click_by_css(Selector.home_aresep_lnk)
       bot.open_window('Inicio - ARESEP')
+    end
+
+    def list_facebook
+      bot.click_by_css(Selector.home_facebook_btn)
+      sleep(2)
+      bot.url
+    end
+
+    def list_avisos
+      bot.click_by_css(Selector.home_avisos)
+      sleep(3)
+      AvisosPage.new(bot)
     end
 
     private

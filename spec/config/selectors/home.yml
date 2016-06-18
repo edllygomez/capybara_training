@@ -4,3 +4,5 @@ home:
   aresep_lnk: "a[href='http://www.aresep.go.cr']"
   search_txt: "edit-search-block-form--2"
   search_btn: "edit-submit"
+  facebook_btn: "#block-block-4 a[href*='facebook']"
+  avisos: ".sutel_shortcut_container a[href*='avisos']"

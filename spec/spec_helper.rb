@@ -11,11 +11,15 @@ require 'capybara/rspec'
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
 Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+  Capybara::Selenium::Driver.new(app, browser: :chrome)
 end
 
 Capybara.register_driver :selenium_firefox do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :firefox)
+  Capybara::Selenium::Driver.new(app, browser: :firefox, marionette: true)
+end
+
+Capybara.register_driver :selenium_safari do |app|
+  Capybara::Selenium::Driver.new(app, browser: :safari)
 end
 
 Capybara.default_driver = :selenium

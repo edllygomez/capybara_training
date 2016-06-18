@@ -84,6 +84,10 @@ module Bot
       page.driver.browser.switch_to.window(window)
     end
 
+    def url
+      current_url
+    end
+
     private
 
     def clear_txt(web_element)
