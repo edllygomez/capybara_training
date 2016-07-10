@@ -75,6 +75,10 @@ module Bot
       page.select(option, from: locator, match: match)
     end
 
+    def select_from_ddl(option, locator)
+      page.select(option, from: locator, )
+    end
+
     def open_window(window_title)
       switch_to_window { title == window_title }
     end
