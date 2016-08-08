@@ -6,3 +6,4 @@ home:
   search_btn: "edit-submit"
   facebook_btn: "#block-block-4 a[href*='facebook']"
   avisos: ".sutel_shortcut_container a[href*='avisos']"
+  fonatel: "ul.tb-megamenu-nav li:nth-child(5) a.dropdown-toggle"

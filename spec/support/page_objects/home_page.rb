@@ -57,6 +57,17 @@ module PageObjects
       AvisosPage.new(bot)
     end
 
+    def list_fonatel
+      menu = bot.find_by(:css, Selector.home_fonatel)
+      action_bot.move_to(menu)
+      sleep(1)
+    end
+
+    def list_que_es_fonatel
+      action_bot.move_by_click(-600, 45)
+      FonatelPage.new(bot)
+    end
+
     private
 
     def router
