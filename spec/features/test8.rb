@@ -2,13 +2,9 @@ require 'spec_helper'
 
 feature "As a sutel user, I'm able ", :js => true do
 
-  # background(:each) do
-  #   Capybara.current_driver = :selenium_safari
-  # end
-
-  # after(:each) do
-  #   Capybara.use_default_driver
-  # end
+  background(:each) do
+    page.driver.browser.manage.window.resize_to(1420, 1440)
+  end
 
   given(:user_bot) { Bot::User.new }
   given(:expected_info) do

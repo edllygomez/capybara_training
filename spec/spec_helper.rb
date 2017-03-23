@@ -19,6 +19,7 @@ Capybara.register_driver :selenium_firefox do |app|
 end
 
 Capybara.register_driver :selenium_safari do |app|
+  Selenium::WebDriver::Safari.driver_path = '/Users/eddly/Documents/Drivers/safaridriver'
   Capybara::Selenium::Driver.new(app, browser: :safari)
 end
 

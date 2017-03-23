@@ -4,6 +4,7 @@ feature "As a sutel user, I'm able ", :js => true do
 
   background(:each) do
     Capybara.current_driver = :selenium_safari
+    page.driver.browser.manage.window.resize_to(1200, 1000)
   end
 
   after(:each) do

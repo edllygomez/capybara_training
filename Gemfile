@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.22.2'
 gem 'rspec-rails', '~> 2.14.0'
 
-gem 'capybara'
-gem 'selenium-webdriver'
+gem 'capybara', '~> 2.13.0'
+gem 'selenium-webdriver', '~> 3.3.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

@@ -4,6 +4,7 @@ feature "As a sutel user, I'm able ", :js => true do
 
   background(:each) do
     Capybara.current_driver = :selenium_firefox
+    page.driver.browser.manage.window.resize_to(1420, 1440)
   end
 
   after(:each) do
