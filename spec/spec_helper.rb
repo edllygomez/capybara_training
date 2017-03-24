@@ -15,11 +15,12 @@ Capybara.register_driver :selenium do |app|
 end
 
 Capybara.register_driver :selenium_firefox do |app|
+  Selenium::WebDriver::Firefox.driver_path = "/Users/egomez/Documents/Drivers/geckodriver"
   Capybara::Selenium::Driver.new(app, browser: :firefox, marionette: true)
 end
 
 Capybara.register_driver :selenium_safari do |app|
-  Selenium::WebDriver::Safari.driver_path = '/Users/eddly/Documents/Drivers/safaridriver'
+  Selenium::WebDriver::Safari.driver_path = "/Applications/Safari\ Technology\ Preview.app/Contents/MacOS/safaridriver"
   Capybara::Selenium::Driver.new(app, browser: :safari)
 end
 
@@ -34,4 +35,8 @@ Capybara.default_max_wait_time = 60
   config.include Capybara::DSL, :type => :feature
   require 'rspec/expectations'
   config.include RSpec::Matchers
+
+  config.after(:each) do
+    Capybara.current_session.driver.quit
+  end
  end

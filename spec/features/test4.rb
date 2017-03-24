@@ -3,7 +3,7 @@ require 'spec_helper'
 feature "As a sutel user, I'm able ", :js => true do
 
   background(:each) do
-    page.driver.browser.manage.window.resize_to(1420, 1440)
+    page.driver.browser.manage.window.resize_to(1200, 1300)
   end
 
   given(:user_bot) { Bot::User.new }

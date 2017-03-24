@@ -11,7 +11,7 @@ module PageObjects
       link = bot.find_all(Selector.avisos_links)[index]
       title = bot.text(link)
       bot.click(link)
-      sleep(3)
+      sleep(5)
       title
     end
   end

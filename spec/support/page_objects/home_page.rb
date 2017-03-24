@@ -40,9 +40,9 @@ module PageObjects
       SearchPage.new(bot)
     end
 
-    def visit_aresep
-      bot.click_by_css(Selector.home_aresep_lnk)
-      bot.open_window('Inicio - ARESEP')
+    def visit_misit
+      bot.click_by_css(Selector.home_micit_lnk)
+      bot.open_window('Inicio')
     end
 
     def list_facebook

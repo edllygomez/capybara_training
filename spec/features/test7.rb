@@ -3,7 +3,9 @@ require 'spec_helper'
 feature "As a sutel user, I'm able ", :js => true do
 
   background(:each) do
-    Capybara.current_driver = :selenium_safari
+    Capybara.current_driver = :selenium_firefox
+    page.driver.browser.manage.window.maximize
+
   end
 
   after(:each) do
