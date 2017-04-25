@@ -6,7 +6,7 @@ feature "As a sutel user attempting to log into my Sutel account, ", :js => true
     page.driver.browser.manage.window.maximize
   end
 
-  LOGIN_LNK = "a[href*='/user/login']"
+  LOGIN_LNK = 'Registro / Ingreso'
   USERNAME_TXT = 'edit-name'
   PASSWORD_TXT = 'edit-pass'
   LOGIN_BTN = 'edit-submit'
@@ -18,9 +18,9 @@ feature "As a sutel user attempting to log into my Sutel account, ", :js => true
 
   scenario "I can see an error message due to a missing captcha entered" do
     visit('/')
-    find(LOGIN_LNK).click
-    fill_in(USERNAME_TXT, :with => username)
-    fill_in(PASSWORD_TXT, :with => password)
+    click_link(LOGIN_LNK)
+    fill_in(USERNAME_TXT, with: username)
+    fill_in(PASSWORD_TXT, with: password)
     find(:id, LOGIN_BTN).click
     message_found = find(ERROR_LBL).text
     expect(message_found).to have_content(expected_message),
